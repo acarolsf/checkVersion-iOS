@@ -2,6 +2,8 @@
 
 Code to check if there is a new version on AppStore.
 
+This code is a version based on [@anupgupta-arg](https://github.com/anupgupta-arg/iOS-Swift-ArgAppUpdater)'s code.
+
 ## Usage
 
 You can force the update by calling
