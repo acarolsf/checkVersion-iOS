@@ -109,17 +109,17 @@ extension UIViewController {
     @objc fileprivate func showAppUpdateAlert( Version : String, Force: Bool, AppURL: String) {
         guard let appName = CheckUpdate.shared.getBundle(key: "CFBundleName") else { return } //Bundle.appName()
 
-        let alertTitle = "Nova Versão"
-        let alertMessage = "Uma nova versão do \(appName) está disponível na AppStore. Atualize já!"
+        let alertTitle = "New version"
+        let alertMessage = "A new version of \(appName) are available on AppStore. Update now!"
 
         let alertController = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
 
         if !Force {
-            let notNowButton = UIAlertAction(title: "Agora não", style: .default)
+            let notNowButton = UIAlertAction(title: "Not now", style: .default)
             alertController.addAction(notNowButton)
         }
 
-        let updateButton = UIAlertAction(title: "Atualizar", style: .default) { (action:UIAlertAction) in
+        let updateButton = UIAlertAction(title: "Update", style: .default) { (action:UIAlertAction) in
             guard let url = URL(string: AppURL) else {
                 return
             }
