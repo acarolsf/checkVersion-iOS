@@ -110,7 +110,7 @@ extension UIViewController {
         guard let appName = CheckUpdate.shared.getBundle(key: "CFBundleName") else { return } //Bundle.appName()
 
         let alertTitle = "New version"
-        let alertMessage = "A new version of \(appName) are available on AppStore. Update now!"
+        let alertMessage = "A new version of \(appName) is available on AppStore. Update now!"
 
         let alertController = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
 
