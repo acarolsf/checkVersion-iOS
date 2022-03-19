@@ -12,7 +12,7 @@ You can force the update by calling
 CheckUpdate.shared.showUpdate(withConfirmation: false)
 ```
 
-Or the user can choose if they wants to update now or later by calling
+Or the user can choose if they want to update now or later by calling
 
 ```
 CheckUpdate.shared.showUpdate(withConfirmation: true)
