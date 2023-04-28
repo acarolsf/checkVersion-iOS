@@ -44,6 +44,8 @@ class CheckUpdate: NSObject {
 
     // MARK: - TestFlight variable
     var isTestFlight: Bool = false
+
+    static let appStoreId = "6446998023" // Id Example
     
     // MARK: - Show Update Function
     func showUpdate(withConfirmation: Bool, isTestFlight: Bool = false) {
@@ -98,7 +100,7 @@ class CheckUpdate: NSObject {
     private func getUrl(from identifier: String) -> String {
         // You should pay attention on the country that your app is located, in my case I put Brazil */br/*
         // Você deve prestar atenção em que país o app está disponível, no meu caso eu coloquei Brasil */br/*
-        let testflightURL = "https://api.appstoreconnect.apple.com/v1/apps/\(identifier)/builds"
+        let testflightURL = "https://api.appstoreconnect.apple.com/v1/apps/\(appStoreId)/builds"
         let appStoreURL = "http://itunes.apple.com/br/lookup?bundleId=\(identifier)"
 
         return isTestFlight ? testflightURL : appStoreURL
