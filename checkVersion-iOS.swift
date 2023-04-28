@@ -76,6 +76,8 @@ class CheckUpdate: NSObject {
                             topController.showAppUpdateAlert(version: testFlightAppVersion, force: force, appURL: (info?.trackViewUrl)!, isTestFlight: self.isTestFlight)
                         }
                     }
+                }  else {
+                    print("App does not exist on \(store)")
                 }
             }
         }
